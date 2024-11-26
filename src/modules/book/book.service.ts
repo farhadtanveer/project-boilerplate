@@ -1,18 +1,18 @@
-import { StudentModel } from "../student/student.model";
 import { TBook } from "./book.interface";
+import { BookModel } from "./book.model";
 
 const createBookIntoDB = async (book: TBook) => {
-  const result = await StudentModel.create();
+  const result = await BookModel.create(book);
   return result;
 };
 
 const getAllBooks = async () => {
-  const result = await StudentModel.find();
+  const result = await BookModel.find();
   return result;
 };
 
 const getSingleBookFromDB = async (id: string) => {
-  const result = await StudentModel.findOne({ id });
+  const result = await BookModel.findOne({ id });
   return result;
 };
 

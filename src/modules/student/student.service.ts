@@ -2,7 +2,6 @@ import { TStudent } from "./student.interface";
 import { StudentModel } from "./student.model";
 
 const createStudentIntoDB = async (student: TStudent) => {
-  // mongoose apply databas query into model.
   const result = await StudentModel.create(student);
   return result;
 };
