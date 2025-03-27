@@ -34,7 +34,7 @@ const getAllBooks = async (req: Request, res: Response) => {
 // get single book
 const getSingleBook = async (req: Request, res: Response) => {
   try {
-    const { bookId } = req.params;
+    const { id: bookId } = req.params;
     const result = await BookServices.getSingleBookFromDB(bookId);
     res.status(200).json({
       success: true,
